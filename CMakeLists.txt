@@ -17,3 +17,6 @@ target_link_libraries(Tappa03 PRIVATE SFML::Graphics)
 
 add_executable(Tappa04 Tappa04/main.cpp)
 target_link_libraries(Tappa04 PRIVATE SFML::Graphics)
+
+add_executable(Tappa05 Tappa05/main.cpp Tappa05/pvz.cpp)
+target_link_libraries(Tappa05 PRIVATE SFML::Graphics)

@@ -37,14 +37,14 @@ const int ZOMBIE_FRAME_HEIGHT = 814;
 const int ZOMBIE_SPEED = 10;
 
 const int ZOMBIE_FRAME_WIDTH_E = 181;
-const int ZOMBIE_FRAME_HEIGHT_E = 271;  //adjust
+const int ZOMBIE_FRAME_HEIGHT_E = 271;
 
 extern float g_scaleX;
 extern float g_scaleY;
 extern sf::Vector2u g_textureSize;
 const int ZOMBIE_SHEET_COLS = 5;
 const int ZOMBIE_SHEET_ROWS = 6;
-const float ZOMBIE_SWITCH_TIME = 0.2f; //adjust
+const float ZOMBIE_SWITCH_TIME = 0.2f;
 
 const int PEA_DMG = 25;
 
@@ -120,7 +120,7 @@ public:
 
 
         walkScale = desiredHeight / walkAnim.getFrameHeight();
-        eatScale  = desiredHeight / eatAnim.getFrameHeight();// * 1.5; //adjust this
+        eatScale  = desiredHeight / eatAnim.getFrameHeight();
 
         sprite.setScale({walkScale, walkScale});
 
@@ -165,9 +165,8 @@ public:
     bool falling = true;
     float stop_coord = 600.f;
 
-    // Constructor that takes a texture reference
     Sun(const sf::Texture& texture) : sprite(texture) {
-        // Set origin to the center so rotation/positioning is easier
+        // origin to center for rotation
         sf::FloatRect bounds = sprite.getLocalBounds();
         sprite.setOrigin({bounds.size.x / 2.f, bounds.size.y / 2.f});
         stop_coord -= rand()%300;

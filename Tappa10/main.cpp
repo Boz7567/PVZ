@@ -24,9 +24,8 @@ float levelUpTimer = 0.0f;
 bool gameWon = false;
 float winTimer = 0.0f;
 bool defeat = false;
-float defeatTimer = 0.0f; // NEW
+float defeatTimer = 0.0f;
 
-// Check if all zombies are dead
 bool allZombiesDead(const std::vector<Zombie> zombies[5]) {
     int total = 0;
     for (int i = 0; i < 5; ++i)
@@ -276,7 +275,6 @@ int main(){
             window.draw(s.sprite);
         }
 
-        // Defeat screen
         if(defeat){
             defeatTimer += elapsed.asSeconds();
             window.draw(popupBgD);
@@ -287,7 +285,6 @@ int main(){
             }
         }
 
-        // Level up popup
         if (levelUp) {
             levelUpTimer += elapsed.asSeconds();
             window.draw(popupBg);
@@ -317,7 +314,6 @@ int main(){
             }
         }
 
-        // Win screen
         if (gameWon) {
             winTimer += elapsed.asSeconds();
             window.draw(winBg);
@@ -410,7 +406,7 @@ void zombieHandler(std::vector<Zombie> zombies[5]){
             if(!hasPlant){
                 z.sprite.move({-elapsed.asSeconds()*ZOMBIE_SPEED, 0});
                 if(z.sprite.getPosition().x < 300.0f){
-                    defeat = true; // FIXED: only triggers when off screen
+                    defeat = true;
                 }
             }
         }

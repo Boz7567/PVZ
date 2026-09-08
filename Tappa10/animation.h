@@ -1,8 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 
-
-
 class Animation {
 public:
     Animation(sf::Texture* texture, int cols, int rows, int frameWidth, int frameHeight, float switchTime)
@@ -22,7 +20,7 @@ public:
     }
 
     void applyToSprite(sf::Sprite& sprite) const {
-        sprite.setTexture(*m_texture); // dereference pointer
+        sprite.setTexture(*m_texture);
         sprite.setTextureRect(m_uvRect);
     }
 

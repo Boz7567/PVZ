@@ -23,4 +23,5 @@ cmake --build build
 
 Gli eseguibili si troveranno nella cartella build, e si chiameranno Tappa01, Tappa02, ..., Tappa10
 ```
-./build/Tappa##
+cd build
+./Tappa##

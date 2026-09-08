@@ -12,7 +12,7 @@ Alessandro Bozzini - 6400176
 
 ---
 
-## Come eseguire la Build (Comando Unico)
+## Come compilare
 
 Dalla cartella principale del progetto (quella contenente il file `CMakeLists.txt`), eseguire i seguenti comandi:
 

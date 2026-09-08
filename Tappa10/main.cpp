@@ -292,7 +292,7 @@ int main(){
             levelUpTimer += elapsed.asSeconds();
             window.draw(popupBg);
             window.draw(levelUpText);
-
+            suns.clear();
             if (levelUpTimer >= 2.0f) {
                 for (int i = 0; i < 5; ++i)
                     delete[] grid[i];
@@ -359,7 +359,7 @@ void zombieSpawner(std::vector<Zombie> zombies[5]) {
             if(zombietime >= 10 && zombiesLeft > 0) {
                 ZombieType type = (rand()%4 == 3) ? CONE : BASIC;
                 sf::Texture& tex = (type == CONE) ? zombieConeTexture : zombieTexture;
-                sf::Texture& Etex = (type == CONE) ? zombieEatingConeTexture : zombieTexture;
+                sf::Texture& Etex = (type == CONE) ? zombieEatingConeTexture : zombieEatingTexture;
                 Zombie aux(tex, Etex, ZOMBIE_SHEET_COLS, ZOMBIE_SHEET_ROWS,
                            ZOMBIE_SWITCH_TIME, rand()%5, type);
                 float rowTop = (baseStartY + aux.row * baseTileHeight) * g_scaleY;

@@ -29,8 +29,8 @@ const float baseStartY = 95.0f;
 const float baseTileWidth = 100.0f;
 const float baseTileHeight = 128.0f;
 
-const int LVL1 = 20;
-const int LVL2 = 40;
+const int LVL1 = 1;
+const int LVL2 = 4;
 
 const int ZOMBIE_FRAME_WIDTH  = 543;
 const int ZOMBIE_FRAME_HEIGHT = 814;

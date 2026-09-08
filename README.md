@@ -12,7 +12,7 @@ Alessandro Bozzini - 6400176
 
 ---
 
-## Come eseguire la Build (Comando Unico)
+## Come compilare
 
 Dalla cartella principale del progetto (quella contenente il file `CMakeLists.txt`), eseguire i seguenti comandi:
 
@@ -23,4 +23,5 @@ cmake --build build
 
 Gli eseguibili si troveranno nella cartella build, e si chiameranno Tappa01, Tappa02, ..., Tappa10
 ```
-./build/Tappa##
+cd build
+./Tappa##
